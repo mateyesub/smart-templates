@@ -1,0 +1,36 @@
+/*Project Name: <%= Name %>*/
+/*For linting options see .jshintrc in the project root folder*/
+
+/* --------------------------------
+BASIC SETUP
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*visit: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+}
+
+canvas {
+  display: block;
+}
+/* END OF: BASIC SETUP */
+/* --------------------------------
+REUSABLE RULES
+-------------------------------- */
+
+/*clearfix is a class to be assigned to a html element 
+that uses the float property to clear it or reset to 
+standard the float property of the elemnts after the it*/
+.clearfix{
+  zoom: 1;
+}
+
+.clearfix::after{  
+  content: '.';
+  clear: both; /*visit: https://developer.mozilla.org/en-US/docs/Web/CSS/clear*/
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* END OF: REUSABLE RULES */

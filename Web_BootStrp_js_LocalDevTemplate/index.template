@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="<%= Language %>">
+  <head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= ProjectName %></title>
+    <!-- Bootstrap CSS -->
+    <link href="styles/Bootstrap/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <!-- Own Stylesheets -->
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- write your html code here -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripts/jQuerry/jquery-3.4.1.js"></script>
+    <script src="scripts/Popper/popper.min.js"></script>
+    <script src="scripts/Bootstrap/bootstrap.js"></script>
+
+    <!-- Own Scripts -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

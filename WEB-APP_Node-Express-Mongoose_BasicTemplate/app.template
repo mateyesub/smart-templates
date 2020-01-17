@@ -1,0 +1,57 @@
+//Project Name: <%= ProjectName %>
+//Author: <%= Author %>
+//For linting options see .jshintrc in the project root folder
+
+//!!!!!!  Before coding install all dependencies: npm install  !!!!!!
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+const app = express();
+
+//Set EJS as view engine
+app.set("view engine", "ejs");
+
+//Parse post request to object
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+//serves files in the public folder
+app.use(express.static("public"));
+
+//stablish connection to MongoDB Server
+const mongodbServer = "mongodb://localhost:27017"; //Replace with dataBase server url
+const db = "/dataBaseName"; //Replace with dataBase Name
+
+function closeMessage () {
+  console.log(`Closed connection to: ${mongodbServer}${db}`);
+}
+
+function connectToMongo() {
+  mongoose.connect(mongodbServer + db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }).then(() => {
+    //connection established successfully
+    console.log(`Succesfully connected to: ${mongodbServer}${db}`);
+  }).catch((error) => {
+    //catch any error during the initial connection
+    console.log(error);
+  }).then(callback);
+}
+
+//Test connection to mongoDB
+connectToMongo(() => mongoose.connection.close(closeMessage()));
+//END OF SETUP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+//Write your code here
+
+
+
+//Run Nodejs server
+app.listen(3000, function() {
+  console.log("Node server running on port 3000");
+});

@@ -1,0 +1,22 @@
+{
+  "name": "html5_boilerplate_7-3",
+  "version": "1.0.0",
+  "description": "A template for Smart Templates for Atom text editor based upon the HTML5_Boilerplate_7-3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML5-boilerplate",
+    "template",
+    "Smart",
+    "Templates",
+    "for",
+    "Atom"
+  ],
+  "author": "Matteo Carotta",
+  "license": "MIT",
+  "dependencies": {
+    "html5-boilerplate": "^7.3.0"
+  }
+}

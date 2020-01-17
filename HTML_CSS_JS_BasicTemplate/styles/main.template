@@ -1,0 +1,62 @@
+/*Plance @import and @charset @font-face rules here*/
+/*Any @import rules must precede all other rules and style rules in a 
+* style sheet besides @charset, which must be the first thing in the 
+* style sheet if it exists, otherwise the @import rule is invalid. 
+* Visit: http://www.w3.org/TR/css3-cascade/#at-import*/
+
+/*Project Name: <%= Name %>*/
+/*For linting options see .jshintrc in the project root folder*/
+
+/*stylesheet written accring to the NemeSpace-BEM (Block Element Modifier) principles
+* in camelCase:
+* namespace prefixes: o-: Object; c-: Component; u-: Utility; t-: Theme; s-: Scope;
+* is-, has-:  Stete or Condition; _: Hack; js-: JavaScript Bind; qa-: QA or Test Bind
+* Visit:
+* https://css-tricks.com/bem-101/
+* https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+* https://css-tricks.com/abem-useful-adaptation-bem/
+*/
+
+/* --------------------------------
+BASIC SETUP
+-------------------------------- */
+/*Selecting also all the pseudo elements after and before the box properties the
+box properties will remain consistent*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*one the box-sizing of an element is changed all
+    the children elements will be effected*/
+}
+
+html{
+  font-size: 62.5%; /*16px * 62.5% = 10px*/
+}
+
+body{
+  font-size: 2rem;
+  box-sizing: border-box; /*visit: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+}
+/* END OF: BASIC SETUP */
+/* --------------------------------
+REUSABLE RULES
+-------------------------------- */
+
+/*clearfix is a class to be assigned to a html element 
+that uses the float property to clear it or reset to 
+standard the float property of the elemnts after the it*/
+.u-clearfix{
+  zoom: 1;
+}
+
+.u-clearfix::after{  
+  content: '.';
+  clear: both; /*visit: https://developer.mozilla.org/en-US/docs/Web/CSS/clear*/
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* END OF: REUSABLE RULES */
